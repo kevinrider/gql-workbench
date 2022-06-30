@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use App\GraphQL\Types\CharacterType;
+
 return [
     'route' => [
         // The prefix for routes; do NOT use a leading slash!
@@ -82,7 +84,7 @@ return [
             ],
             // The types only available in this schema
             'types' => [
-                // ExampleType::class,
+                CharacterType::class,
             ],
 
             // Laravel HTTP middleware
