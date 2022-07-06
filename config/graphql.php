@@ -85,6 +85,7 @@ return [
             // The types only available in this schema
             'types' => [
                 CharacterType::class,
+                MovieType::class,
             ],
 
             // Laravel HTTP middleware
