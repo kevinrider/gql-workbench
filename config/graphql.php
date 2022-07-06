@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\GraphQL\Types\CharacterType;
+use App\GraphQL\Types\MovieType;
 
 return [
     'route' => [
