@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\GraphQL\Types\CharacterType;
 use App\GraphQL\Types\MovieType;
+use App\GraphQL\Types\PlanetType;
 
 return [
     'route' => [
@@ -87,6 +88,7 @@ return [
             'types' => [
                 CharacterType::class,
                 MovieType::class,
+                PlanetType::class,
             ],
 
             // Laravel HTTP middleware
