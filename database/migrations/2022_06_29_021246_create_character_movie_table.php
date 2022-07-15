@@ -12,12 +12,12 @@ return new class() extends Migration {
      */
     public function up()
     {
-        Schema::create('character_friends', function (Blueprint $table) {
+        Schema::create('character_movie', function (Blueprint $table) {
             $table->unsignedBigInteger('character_id');
-            $table->unsignedBigInteger('friend_id');
-            $table->unique(['character_id', 'friend_id']);
+            $table->unsignedBigInteger('movie_id');
+            $table->unique(['character_id', 'movie_id']);
             $table->foreign('character_id')->references('id')->on('characters');
-            $table->foreign('friend_id')->references('id')->on('characters');
+            $table->foreign('movie_id')->references('id')->on('movies');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class() extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('character_friends');
+        Schema::dropIfExists('character_movies');
     }
 };
