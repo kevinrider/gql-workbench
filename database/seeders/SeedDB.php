@@ -16,13 +16,23 @@ class SeedDB extends Seeder
      */
     public function run()
     {
-        //Create some movies
+        //Create fifty movies
         $movies = Movie::factory()->count(50)->create();
 
         foreach ($movies as $movie) {
-            //Setup Characters
+            //Setup Five Characters Per Movie
             $characters = Character::factory()->count(5)->create();
-            //Todo: Setup Character to Movies
+
+            //Setup Character to Movies and Character Friends
+            foreach ($characters as $character) {
+                //Map this movie to the character
+                $character->movies()->save($movie);
+                //Each Character has one friend
+                $friend = Character::factory()->create();
+                $character->friends()->save($friend);
+                //Bind friend to movie as well
+                $friend->movies()->save($movie);
+            }
         }
     }
 }
