@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
+use App\GraphQL\Queries\MoviesQuery;
 use App\GraphQL\Types\CharacterType;
 use App\GraphQL\Types\MovieType;
 use App\GraphQL\Types\PlanetType;
+use App\GraphQL\Types\SpeciesType;
 
 return [
     'route' => [
@@ -80,6 +82,7 @@ return [
         'default' => [
             'query' => [
                 // ExampleQuery::class,
+                MoviesQuery::class
             ],
             'mutation' => [
                 // ExampleMutation::class,
@@ -89,6 +92,7 @@ return [
                 CharacterType::class,
                 MovieType::class,
                 PlanetType::class,
+                SpeciesType::class,
             ],
 
             // Laravel HTTP middleware
