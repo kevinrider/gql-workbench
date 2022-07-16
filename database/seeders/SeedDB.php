@@ -17,7 +17,7 @@ class SeedDB extends Seeder
     public function run()
     {
         //Create fifty movies
-        $movies = Movie::factory()->count(50)->create();
+        $movies = Movie::factory()->count(25)->create();
 
         foreach ($movies as $movie) {
             //Setup Five Characters Per Movie
