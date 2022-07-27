@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\GraphQL\Queries\CharactersQuery;
 use App\GraphQL\Queries\MoviesQuery;
 use App\GraphQL\Types\CharacterType;
 use App\GraphQL\Types\MovieType;
@@ -82,7 +83,8 @@ return [
         'default' => [
             'query' => [
                 // ExampleQuery::class,
-                MoviesQuery::class
+                MoviesQuery::class,
+                CharactersQuery::class,
             ],
             'mutation' => [
                 // ExampleMutation::class,

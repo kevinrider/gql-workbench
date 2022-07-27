@@ -30,7 +30,7 @@ class MoviesQuery extends Query
             'id' => [
                 'name' => 'id',
                 'type' => Type::int(),
-                'description' => 'filter id'
+                'description' => 'filter by id'
             ],
             'title' => [
                 'name' => 'title',
