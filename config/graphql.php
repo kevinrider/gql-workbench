@@ -5,6 +5,7 @@ declare(strict_types=1);
 use App\GraphQL\Queries\CharactersQuery;
 use App\GraphQL\Queries\MoviesQuery;
 use App\GraphQL\Queries\PlanetsQuery;
+use App\GraphQL\Queries\SpeciesQuery;
 use App\GraphQL\Types\CharacterType;
 use App\GraphQL\Types\MovieType;
 use App\GraphQL\Types\PlanetType;
@@ -87,6 +88,7 @@ return [
                 MoviesQuery::class,
                 CharactersQuery::class,
                 PlanetsQuery::class,
+                SpeciesQuery::class,
             ],
             'mutation' => [
                 // ExampleMutation::class,
