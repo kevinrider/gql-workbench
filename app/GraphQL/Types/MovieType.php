@@ -6,6 +6,7 @@ namespace App\GraphQL\Types;
 
 use App\Models\Movie;
 use GraphQL\Type\Definition\Type;
+use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class MovieType extends GraphQLType
@@ -35,6 +36,11 @@ class MovieType extends GraphQLType
                 'type' => Type::string(),
                 'description' => 'updated at time',
             ],
+            'characters' => [
+                'type' => Type::listof(GraphQL::type('Character')),
+                'description' => 'movie characters',
+                'always' => ['id']
+            ]
         ];
     }
 }
